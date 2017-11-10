@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:id="@+id/share"
+		android:icon="@mipmap/share"
+		android:orderInCategory="90"
+		android:title="分享"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/save"
+		android:icon="@mipmap/save"
+		android:orderInCategory="90"
+		android:title="保存"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/face"
+		android:icon="@mipmap/huaji"
+		android:orderInCategory="90"
+		android:title="动画"
+		app:showAsAction="ifRoom" />
+</menu>

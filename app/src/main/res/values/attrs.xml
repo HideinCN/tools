@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="ExpandableTextView">
+		<!-- 默认折叠状态下，文字最多显示的行数 -->
+		<attr name="maxCollapsedLines" format="integer"/>
+		<!-- 动画时长 -->
+		<attr name="animDuration" format="integer"/>
+		<!-- 动画启动时文字的透明度 -->
+		<attr name="animAlphaStart" format="float"/>
+		<!-- 将文字展开的图标（向下的箭头） -->
+		<attr name="expandDrawable" format="reference"/>
+		<!-- 将文字收起的图标（向上的箭头） -->
+		<attr name="collapseDrawable" format="reference"/>
+	</declare-styleable>
+	<!--完成进度条-->
+
+	<declare-styleable name="RoundProgressBar">
+		<attr name="roundColor" format="color"/>
+
+		<attr name="roundProgressColor" format="color"/>
+
+		<attr name="roundWidth" format="dimension"></attr>
+
+		<attr name="textColor" format="color"/>
+
+		<attr name="textSize" format="dimension"/>
+
+		<attr name="max" format="integer"></attr>
+
+		<attr name="textIsDisplayable" format="boolean"></attr>
+
+		<attr name="style">
+
+			<enum name="STROKE" value="0"></enum>
+
+			<enum name="FILL" value="1"></enum>
+
+		</attr>
+
+	</declare-styleable>
+
+</resources>

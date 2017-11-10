@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	package="com.liberation.romtools"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.READ_LOGS"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<!--android:sharedUserId="android.uid.system"-->
+	<!--<uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
+	<uses-permission android:name="android.permission.REBOOT" />-->
+
+	<application
+		android:name=".app.RomToolsApplication"
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name=".MainActivity"
+			android:label="@string/app_name"
+			android:screenOrientation="portrait"
+			android:launchMode="singleTask"
+			android:theme="@style/AppTheme.NoActionBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<!--表情编辑页-->
+		<activity android:name=".view.activity.FaceActivity"
+		          android:screenOrientation="portrait"/>
+		<!--默认表情包选择-->
+		<activity android:name=".view.activity.FaceDefaultActivity"
+		          android:screenOrientation="portrait"/>
+
+		<service android:name="com.avos.avoscloud.PushService"/>
+
+		<receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.intent.action.USER_PRESENT"/>
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name=".receiver.CustomReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+				<action android:name="android.intent.action.USER_PRESENT"/>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+				<action android:name="com.avos.UPDATE_STATUS"/>
+				<action android:name="com.liberation.roms.MESSAGE"/>
+			</intent-filter>
+		</receiver>
+	</application>
+
+</manifest>

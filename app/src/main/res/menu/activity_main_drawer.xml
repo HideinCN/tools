@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group android:checkableBehavior="single">
+		<item
+			android:id="@+id/nav_flash_recovery"
+			android:icon="@mipmap/flash"
+			android:title="刷入本地ROM"/>
+		<item
+			android:id="@+id/nav_factary_set"
+			android:icon="@mipmap/clear"
+			android:title="恢复出厂设置"/>
+	</group>
+
+	<item android:title="更多 ">
+		<menu>
+			<item
+				android:id="@+id/nav_pay"
+				android:icon="@mipmap/pay"
+				android:title="捐赠方式"/>
+			<item
+				android:id="@+id/nav_send"
+				android:icon="@mipmap/question"
+				android:title="问题反馈"/>
+		</menu>
+	</item>
+
+</menu>

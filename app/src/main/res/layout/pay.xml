@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="8dp"
+	android:orientation="vertical">
+	<TextView
+		android:layout_margin="16dp"
+		android:id="@+id/tv_notice"
+		android:text="长按扫描二维码,二维码保存路径为sdcard/pay/"
+		android:gravity="center"
+		android:textSize="20dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<LinearLayout
+		android:layout_marginTop="3dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_height="wrap_content">
+
+		<Button
+			android:id="@+id/confirm"
+			android:layout_width="0dp"
+			android:layout_height="45dp"
+			android:layout_margin="8dp"
+			android:layout_weight="1"
+			android:background="@drawable/ripple_bg"
+			android:text="支付宝"/>
+
+		<Button
+			android:id="@+id/cancle"
+			android:layout_width="0dp"
+			android:layout_height="45dp"
+			android:layout_margin="8dp"
+			android:layout_weight="1"
+			android:background="@drawable/ripple_bg"
+			android:text="微信"/>
+	</LinearLayout>
+	<ImageView
+		android:id="@+id/iv"
+		android:clickable="true"
+		android:scaleType="fitXY"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+
+</LinearLayout>
